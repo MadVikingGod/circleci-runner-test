@@ -3,9 +3,10 @@ version: 2.1
 jobs:
   run:
     docker:
-      image: golang
+      - image: golang
     steps:
-      - go run .
+      - checkout
+      - run: go run .
 workflows:
   version: 
   run_run_job:
