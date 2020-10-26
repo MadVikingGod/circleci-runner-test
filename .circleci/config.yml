@@ -2,8 +2,8 @@ version: 2.1
 
 jobs:
   run:
-    docker:
-      - image: golang
+    machine:
+      resource_class: madvikinggod/local
     steps:
       - checkout
       - run: go run .
